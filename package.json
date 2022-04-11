@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "express": "^4.17.3",
-    "onoff": "^6.0.3"
+    "node-dht-sensor": "^0.4.3",
+    "onoff": "^6.0.3",
+    "pi-camera": "^1.7.0"
   },
   "name": "Internet_of_Things",
   "version": "1.0.0",

@@ -1,14 +1,67 @@
-
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel = "stylesheet" type="text/css" href="./style.css" > 
-        <title>IOT Site</title>
+        <script src="./index.js"></script>
+
+        <title>IOT_Reptile_Enclosure_Monitor</title>
     </head>
-    <body>
-        <h1>Website</h1>
-        <p>This page has been viewed ${newCount} Times.</p>
+
+    <body> 
+        <h1>/IOT-Reptile-Enclosure-Monitor</h1>
+        <div id="dataDiv">
+
+            <section id="liveFeedConatainer">
+                <h2>Live Feed</h2>
+                <img src="placeHolder.jpg" alt="A live feed from a Raspberry Pi Camera module">
+            </section>
+
+            <section>
+                <h2>Thermometer 1</h2>
+                <p>15°C</p>
+            </section>
+        
+            <section>
+                <h2>Thermometer 2</h2>
+                <p>20°C</p>
+            </section>
+        
+            <section>
+                <h2>Hygrometer  1</h2>
+                <p>50%</p>
+            </section>
+
+            <section>
+                <h2>Hygrometer  2</h2>
+                <p>50%</p>
+            </section>
+            
+            <section id="buttonSectionTop">
+                <h2>Door Status</h2>
+                <p>Open</p>
+            </section>
+
+            <section id="buttonSectionBottom">
+                <button id="doorButton"><p>Cycle Door</p></button>
+            </section>
+
+            <section>
+                <h2>Water Depth</h2>
+                <p>2cm</p>
+            </section>
+
+            <section id="buttonSectionTop">
+                <h2>Ventilation</h2>
+                <p>Disabled</p>
+            </section>
+
+            <section id="buttonSectionBottom">
+                <button id="fanButton"><p>Cycle Fans</p></button>
+            </section>
+            
+        </div>
+        <div class="loading"></div>
     </body>
-    </html>
+</html>
