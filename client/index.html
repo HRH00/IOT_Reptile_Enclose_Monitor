@@ -4,62 +4,84 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel = "stylesheet" type="text/css" href="./style.css" > 
-        <title>IOT_Reptile_Enclosure_Monitor</title>
+        <script src="./index.js"></script>
+        <link rel="icon" type="image/x-icon" href="./snakeLogo.png">
+
+
+        <title>Reptile Monitor</title>
     </head>
 
-    <body>
-        <h1>/IOT-Reptile-Enclosure-Monitor</h1>
-        <div id="dataDiv">
+    <body> 
+        <div id="pageHeading">
+            <img src="./snakeLogo.png" alt="A cartoon image of a snakes head" id="snakeLogo">
+            <h1>Reptile Enclosure Monitor</h1>
+        </div>
+        <div id="loading"></div>
 
+        <div id="dataDiv">
             <section id="liveFeedConatainer">
                 <h2>Live Feed</h2>
-                <img src="C:\Users\hhold\Pictures\abstract background.jpg" alt="A live feed from a Raspberry Pi Camera module">
+                <img src="placeHolder.jpg" alt="A live feed from a Raspberry Pi Camera module">
             </section>
 
+            <section id="lightButtonSectionTop">
+                <h2 >Light Status</h2>
+                <p id="light" class="makeLargeTextOnHover">No Data</p>
+
+            </section>
+
+            <section id="lightButtonSectionBottom">
+                <button id="lightButton"><p>Cycle lights</p></button>
+            </section>
+
+
+
             <section>
-                <h2>Thermometer 1</h2>
-                <p>15°C</p>
+                <h2 >Thermometer 1</h2>
+                <p id="Thermometer1" class="makeLargeTextOnHover">No Data</p>
             </section>
         
             <section>
-                <h2>Thermometer 2</h2>
-                <p>20°C</p>
+                <h2 >Thermometer 2</h2>
+                <p id="Thermometer2" class="makeLargeTextOnHover">No Data</p>
             </section>
         
             <section>
-                <h2>Hygrometer  1</h2>
-                <p>50%</p>
+                <h2 >Hygrometer  1</h2>
+                <p id="Hygrometer1" class="makeLargeTextOnHover">No Data</p>
             </section>
 
             <section>
-                <h2>Hygrometer  2</h2>
-                <p>50%</p>
+                <h2 >Hygrometer  2</h2>
+                <p id="Hygrometer2" class="makeLargeTextOnHover">No Data</p>
             </section>
             
-            <section id="buttonSectionTop">
-                <h2>Door Status</h2>
-                <p>Open</p>
+            <section id="doorButtonSectionTop">
+                <h2 >Door Status</h2>
+                <p id="doorStat" class="makeLargeTextOnHover">No Data</p>
+
             </section>
 
-            <section id="buttonSectionBottom">
+            <section id="doorButtonSectionBottom">
                 <button id="doorButton"><p>Cycle Door</p></button>
             </section>
 
             <section>
                 <h2>Water Depth</h2>
-                <p>2cm</p>
+                <p id="waterDepth" class="makeLargeTextOnHover">No Data</p>
             </section>
 
-            <section id="buttonSectionTop">
+            <section id="ventButtonSectionTop">
                 <h2>Ventilation</h2>
-                <p>Disabled</p>
+                <p id="ventStat" class="makeLargeTextOnHover">No Data</p>
             </section>
 
-            <section id="buttonSectionBottom">
-                <button id="fanButton"><p>Cycle Fans</p></button>
+            <section id="ventButtonSectionBottom">
+                <button id="fanButton"><p>Cycle Vent</p></button>
             </section>
             
         </div>
-        <div class="loading"></div>
+
+
     </body>
 </html>

@@ -1,13 +1,32 @@
+/*VARIABLES*/
+/*END----------END*/
 :root{
-    /*--main-bg-colour: #282828	;*/
-    --main-accent-colour:#AA336A;
-    --main-canvas-colour: #551a35;
-    --main-text-colour:#FFF;
-    --main-hover-colour:#5c1c3a;
+    --main-bg-colour: #282828	;
+    --main-accent-colour:#1a551b;
+    --main-canvas-colour: #1a551b;
+    --main-text-colour:rgb(152, 168, 32);
+}
+/*END----------END*/
+
+
+/*DESKTOP TABLET*/
+@media only screen and (max-width: 1000px) {
+    img:hover{
+        transform:scale(2);       
+    }
+
 }
 @media only screen and (min-width: 600px) {
+    #snakeLogo{
+        transition: all 0.3s ease-in-out;
+        width: 5%;
+
+    }    
+    #snakeLogo:hover{    
+        transform: scale(3);
+    }
     html{
-        background-color:var(--main-canvas-colour);
+        background-color:var(--main-accent-colour);
         margin: 0.1rem;
         padding: 0.1rem;    
         display: flex;
@@ -16,66 +35,123 @@
     } 
     body{
         width: 98vw;
-        border-radius: 1rem;
+        border-radius: 0.1rem;
         padding: 2rem;
     }
-    img{
-        width: 80%;
-        height: 80%;
-        border-radius: 2rem;
-    }
+    img{transition: all 0.4s ease-in-out;}
     img:hover{
-        width: 100%;
-        height: 100%;
+        transform:scale(1.4);       
     }
     button:hover{
+        transform: scale(1.2);
         box-shadow: 10%;
-        background-color: var(--main-hover-colour);
         text-emphasis-color: bold 2rem;
         border-color: #FFF;
-        width: 100%;
-        height: 100%;
+        width: 50%;
+        height: 50%;
     }
-    h1:hover{
-        color: var(--main-accent-colour);
+    p, h1, h2{transition: all 0.2s ease-in-out;}
+    p:hover, h1:hover, h2:hover{
+        transform: scale(1.2);
+        color: white;
     }
+    .makeLargeTextOnHover:hover{
+        transform: scale(3);
+    }
+    ::-webkit-scrollbar {
+        width: 20px;
+    }
+    ::-webkit-scrollbar-track {
+        background: var(--main-bg-colour);
+    }
+    ::-webkit-scrollbar-thumb {
+        background: rgb(95, 86, 86);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--main-text-colour);
+    }
+}
+/*END----------END*/
 
-::-webkit-scrollbar {
-    width: 20px;
-}
-::-webkit-scrollbar-track {
-    background: var(--main-bg-colour);
-}
-::-webkit-scrollbar-thumb {
-    background: rgb(95, 86, 86);
-}
-::-webkit-scrollbar-thumb:hover {
-    background: var(--main-accent-colour);
-  }
-}
 
+/*MOBILE*/
 @media only screen and (max-width:600px) {
+    #snakeLogo{
+        width: 20%;
+    }
+
+
     h1{
         text-align: center;
     }
         
-    img{width: 100%;}
+}
+/*END----------END*/
+
+/*LOADING ANIM*/
+#loading {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10rem;
+    border: 20px solid var(--main-accent-colour);
+    border-radius: 50%;
+    border-top: 20px solid rgb(9, 153, 4);
+    width: 200px;
+    height: 200px;
+    animation: spinner 5s linear reverse infinite;
+    visibility: visible;
+  }
+  @keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+/*END----------END*/
+
+
+
+
+/*ALL SCREEN WIDTHS*/
+p{
+    font-size: 1.2rem;
+}
+#pageHeading{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 2vh;
+}
+#snakeLogo{
+    align-self: center;
+    border-radius: 0%;
+    border: 0;
+    padding-left: 5%;
+    padding-right: 10%;
+}
+#dataDiv{
+    visibility: hidden;
 }
 img{
-    border: 0.3rem solid var(--main-accent-colour);    
+    transition: all 0.4s ease-in-out;
+    border: 0.2rem solid var(--main-accent-colour);    
 }
 body{
-    background-color: var(--main-canvas-colour);    
+    background-color: var(--main-bg-colour);    
     color: var(--main-text-colour);
+    background: var(--main-bg-colour);
 
     
 }
 button{
+    transition: all 0.3s ease-in-out;
     border-radius:2rem;
     background-color: var(--main-accent-colour);
     text-align: center;
     color: white;
-    width: 70%;
+    width: 45%;
 }
 #liveFeedConatainer{
     flex-direction: column;
@@ -83,7 +159,11 @@ button{
     justify-content: space-evenly;
 }
 section{
-    padding: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -95,23 +175,8 @@ section{
 #buttonSectionBottom{
     padding-top:1vh;
 }
-
-
-.loading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    border: 20px solid var(--main-accent-colour);
-    border-radius: 50%;
-    border-top: 20px solid var(--main-canvas-colour);
-    width: 200px;
-    height: 200px;
-    animation: spinner 2s linear reverse infinite;
-    visibility: visible;
+  img{
+    width: 50%;
+    height: 50%;
+    border-radius: 2rem;
   }
-  @keyframes spinner {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-
