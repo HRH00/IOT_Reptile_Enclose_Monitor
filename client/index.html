@@ -21,12 +21,12 @@
         <div id="dataDiv">
             <section id="liveFeedConatainer">
                 <h2>Live Feed</h2>
-                <img src="placeHolder.jpg" alt="A live feed from a Raspberry Pi Camera module">
+                <img id="liveFeed" src="/placeHolder.jpg" alt="A live feed from a Raspberry Pi Camera module">
             </section>
 
             <section id="lightButtonSectionTop">
                 <h2 >Light Status</h2>
-                <p id="light" class="makeLargeTextOnHover">No Data</p>
+                <p id="lightStat" class="makeLargeTextOnHover">No Data</p>
 
             </section>
 
@@ -45,7 +45,12 @@
                 <h2 >Thermometer 2</h2>
                 <p id="Thermometer2" class="makeLargeTextOnHover">No Data</p>
             </section>
-        
+
+            <section>
+                <h2 >Thermometer 3</h2>
+                <p id="Thermometer3" class="makeLargeTextOnHover">No Data</p>
+            </section>
+
             <section>
                 <h2 >Hygrometer  1</h2>
                 <p id="Hygrometer1" class="makeLargeTextOnHover">No Data</p>
@@ -56,6 +61,19 @@
                 <p id="Hygrometer2" class="makeLargeTextOnHover">No Data</p>
             </section>
             
+            <section>
+                <h2 >Hygrometer 3</h2>
+                <p id="Hygrometer3" class="makeLargeTextOnHover">No Data</p>
+            </section>
+            <section>
+                <h2 >External Thermometer</h2>
+                <p id="ExternalT" class="makeLargeTextOnHover">No Data</p>
+            </section>
+        
+            <section>
+                <h2 >External Hygrometer</h2>
+                <p id="ExternalH" class="makeLargeTextOnHover">No Data</p>
+            </section>
             <section id="doorButtonSectionTop">
                 <h2 >Door Status</h2>
                 <p id="doorStat" class="makeLargeTextOnHover">No Data</p>
@@ -77,7 +95,7 @@
             </section>
 
             <section id="ventButtonSectionBottom">
-                <button id="fanButton"><p>Cycle Vent</p></button>
+                <button id="ventButton"><p>Cycle Vent</p></button>
             </section>
             
         </div>

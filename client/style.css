@@ -23,7 +23,7 @@
 
     }    
     #snakeLogo:hover{    
-        transform: scale(3);
+        transform: scale(1.5);
     }
     html{
         background-color:var(--main-accent-colour);
@@ -43,20 +43,22 @@
         transform:scale(1.4);       
     }
     button:hover{
-        transform: scale(1.2);
+        transform: scale(1.05);
         box-shadow: 10%;
+        background-color: rgb(35, 182, 40);
         text-emphasis-color: bold 2rem;
         border-color: #FFF;
         width: 50%;
         height: 50%;
     }
     p, h1, h2{transition: all 0.2s ease-in-out;}
-    p:hover, h1:hover, h2:hover{
+    h1:hover, h2:hover{
         transform: scale(1.2);
         color: white;
     }
     .makeLargeTextOnHover:hover{
         transform: scale(3);
+        color: white;
     }
     ::-webkit-scrollbar {
         width: 20px;

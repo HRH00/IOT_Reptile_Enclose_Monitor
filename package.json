@@ -4,7 +4,7 @@
     "node-dht-sensor": "^0.4.3",
     "nodemon": "^2.0.16",
     "onoff": "^6.0.3",
-    "pi-camera": "^1.7.0"
+    "pigpio": "^3.3.1"
   },
   "name": "Internet_of_Things",
   "version": "1.0.0",
@@ -14,6 +14,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "none",
   "description": ""
 }
