@@ -2,8 +2,6 @@
   "dependencies": {
     "express": "^4.17.3",
     "node-dht-sensor": "^0.4.3",
-    "nodemon": "^2.0.16",
-    "onoff": "^6.0.3",
     "pigpio": "^3.3.1"
   },
   "name": "Internet_of_Things",
@@ -14,6 +12,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "none",
+  "license": "ISC",
   "description": ""
 }
