@@ -2,10 +2,14 @@
 module.exports = class reptileData {
   constructor(){
       this.lightOn = false;//contructor initiates member varaibles to appropriete values 
+      
       this.Thermometer1 = null;
       this.Thermometer2 = null;
       this.Hygrometer1 = null;
       this.Hygrometer2 = null;
+      this.externalThermometer = null;
+      this.externalHygrometer = null;
+
       this.DoorClosed = true;//state of door
       this.WaterDepth = null;
       this.VentOn = false;//state of vent
@@ -14,8 +18,9 @@ module.exports = class reptileData {
       this.LightPin = null;//these member variables are used to store the pin values for connected hardware for use in svr.js
       this.DHT1Pin = null;
       this.DHT2Pin = null;
-      this.DHT3Pin = null;
-      this.DoorPin = null;
+      this.DHTExternalPin = null;
+      this.DoorDirPin = null;
+      this.DoorStepPin = null;
       this.WaterTrigPin = null; 
       this.WaterEchoPin = null; 
       this.VentPin = null;
@@ -33,13 +38,14 @@ module.exports = class reptileData {
       this.VentOn = VO;
       this.heaterOn = HO;
   }
-  setPins(LightPin, DHT1Pin, DHT2Pin, DHT3Pin, DoorPin, WaterTrigPin, WaterEchoPin, VentPin,HeatPin){//sets all the pins values, later the values could be stored in a text file, which this class could access to set the pin values
+  setPins(LightPin, DHT1Pin, DHT2Pin, DHTexterPin, DoorDirPin,DoorStepPin, WaterTrigPin, WaterEchoPin, VentPin,HeatPin){//sets all the pins values, later the values could be stored in a text file, which this class could access to set the pin values
     //so users can set their own pin values without having to edit source code
       this.LightPin = LightPin;
       this.DHT1Pin = DHT1Pin;
       this.DHT2Pin = DHT2Pin;
-      this.DHT3Pin = DHT3Pin;
-      this.DoorPin = DoorPin;
+      this.DHTExternalPin = DHTexterPin;
+      this.DoorDirPin = DoorDirPin;
+      this.DoorStepPin = DoorStepPin;
       this.WaterTrigPin = WaterTrigPin;
       this.WaterEchoPin = WaterEchoPin;
       this.VentPin = VentPin;
